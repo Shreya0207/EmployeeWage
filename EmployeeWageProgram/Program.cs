@@ -1,17 +1,15 @@
-﻿using EmployeeWageProgram;
-using System;
-namespace Employee
+﻿using System;
+
+namespace EmployeeWageProgram
 {
     class Program
     {
         static void Main(string[] args)
         {
-            EmpWage samsung = new EmpWage("Samsung", 10, 22, 120);
-            EmpWage capg = new EmpWage("Capgemini", 25, 18, 80);
-            samsung.compEmployeeWage();
-            capg.compEmployeeWage();
-            Console.WriteLine(samsung.toString());
-            Console.WriteLine(capg.toString());
+            EmpWageArrayMethod wageCalculation = new EmpWageArrayMethod();
+            wageCalculation.addCompanyEmpWage("SAMSUNG", 25, 18, 80);
+            wageCalculation.addCompanyEmpWage("CAPGEMINI", 50, 28, 120);
+            wageCalculation.compEmployeeWage();
         }
     }
 }
